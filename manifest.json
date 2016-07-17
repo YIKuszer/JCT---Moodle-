@@ -1,0 +1,25 @@
+{
+
+  "manifest_version": 2,
+  "name": "JCT - Moodle++",
+  "version": "1.0",
+
+  "content_scripts":
+  [
+    {
+
+      "matches": ["*://moodle.jct.ac.il/"],
+      "js"     : ["js/jquery.min.js","content-scripts/hide-courses.js"],
+      "run_at" : "document_start"
+    }
+  ],
+
+  "applications": {
+    "gecko": {
+      "id": "yossikuszer@hotmail.com"
+    }
+  },
+
+  "permissions": ["storage"]
+
+}
