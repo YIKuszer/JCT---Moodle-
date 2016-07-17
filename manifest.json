@@ -8,7 +8,7 @@
   [
     {
 
-      "matches": ["*://moodle.jct.ac.il/"],
+      "matches": ["*://moodle.jct.ac.il/","*://moodle.jct.ac.il/?*"],
       "js"     : ["js/jquery.min.js","content-scripts/hide-courses.js"],
       "run_at" : "document_start"
     }
@@ -16,8 +16,13 @@
 
   "applications": {
     "gecko": {
-      "id": "yossikuszer@hotmail.com"
+      "id": "yossef@kuszerjctmoodle.com"
     }
+  },
+
+  "icons": {
+    "48": "icon48.png",
+    "96": "icon.png"
   },
 
   "permissions": ["storage"]
