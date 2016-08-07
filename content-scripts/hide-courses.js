@@ -26,6 +26,9 @@
 
 $(document).ready(function () {
 
+	//hide the useless image that is loaded when the moodle starts
+	$(".box.generalbox.sitetopic").hide();
+	
 	addButtons();
 	addHideUnhideButton();
 
@@ -78,7 +81,7 @@ $(document).ready(function () {
 //add the two buttons in the page, that will let to transist between the page with all selected courses, and the page with the option to hide/unhide courses
 function addButtons() {
 	
-	var buttons = '<div><button style="width:49%;height:50px" id="show_current" disabled>Current Curses</button><button id="show_all" style="width:49%;height:50px" >All Curses</button></div>';
+	var buttons = '<div><button style="width:49%;height:50px" id="show_current" disabled><h5>הקורסים שלי</h5></button><button id="show_all" style="width:49%;height:50px" ><h5>כל הקורסים</h5></button></div>';
 
 	//remove the title "My Courses" and add a custom one
 	$("#frontpage-course-list").children("h2").hide(); 
@@ -89,8 +92,8 @@ function addButtons() {
 function addHideUnhideButton()
 {
 	//add hide/unhide button
-	$("#frontpage-course-list").find(".moreinfo").append("<button class='hide_button'>HIDE</button>");
-	$("#frontpage-course-list").find(".moreinfo").append("<button class='unhide_button'>UNHIDE</button>");
+	$("#frontpage-course-list").find(".moreinfo").append("<button class='hide_button'>הסתר</button>");
+	$("#frontpage-course-list").find(".moreinfo").append("<button class='unhide_button'>הצג</button>");
 
 	//by default hide all the hide/unhide buttons
 	$("#frontpage-course-list").find(".unhide_button").hide();
