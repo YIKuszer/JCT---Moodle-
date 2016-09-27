@@ -26,8 +26,9 @@
 
 $(document).ready(function () {
 
-	//hide the useless image that is loaded when the moodle starts
-	$(".box.generalbox.sitetopic").hide();
+	//set the courses menu on top
+	setCoursesOnTop()
+
 	
 	addButtons();
 	addHideUnhideButton();
@@ -145,4 +146,12 @@ function unsetHideUnhideButton()
 {
 	$("#frontpage-course-list").find(".unhide_button").hide();
 	$("#frontpage-course-list").find(".hide_button").hide();	
+}
+
+//put the courses menu on top
+function setCoursesOnTop()
+{
+	//get the course's menu, and set him on Top
+	$("#frontpage-course-list").prependTo("div[role='main']");
+
 }
